@@ -1,4 +1,4 @@
-#gen-userdata
+# gen-userdata
 A utility for generating an Ignition config file from a Golang template.
 Makes it trivial to convert permissions to decimal, encode files, and escape systemd unit contents.
 
