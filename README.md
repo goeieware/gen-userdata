@@ -1,5 +1,5 @@
 # gen-userdata
-A utility for generating an Ignition config file from a Golang template.
+A utility for generating an [https://github.com/coreos/ignition](Ignition) config file from a Golang template.
 Makes it trivial to convert permissions to decimal, encode files, and escape systemd unit contents.
 
 ## Installation
@@ -11,7 +11,7 @@ Makes it trivial to convert permissions to decimal, encode files, and escape sys
 ## Functions provided to the template:
 * `mode`: Converts supplied file mode/permission, and inserts the decimal equivalent into the ignition config.
 * `base64`: Loads the supplied file, encodes as Base64, and inserts the string into the ignition config. 
-* `exscape`: Loads the supplied files, escapes quotes and newlines, and inserts the result into the ignition config.
+* `escape`: Loads the supplied files, escapes quotes and newlines, and inserts the result into the ignition config.
 
 ### Example template:
 
