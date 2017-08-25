@@ -1,5 +1,5 @@
 # gen-userdata
-A utility for generating an [https://github.com/coreos/ignition](Ignition) config file from a Golang template.
+A utility for generating an [Ignition](https://github.com/coreos/ignition) config file from a Golang template.
 Makes it trivial to convert permissions to decimal, encode files, and escape systemd unit contents.
 
 ## Installation
