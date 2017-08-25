@@ -15,7 +15,7 @@ Makes it trivial to convert permissions to decimal, encode files, and escape sys
 
 ### Example template:
 
-`
+```
 {
     "ignition": { 
         "version": "2.0.0"
@@ -61,4 +61,4 @@ Makes it trivial to convert permissions to decimal, encode files, and escape sys
         ]
     }
 }
-`
+```
