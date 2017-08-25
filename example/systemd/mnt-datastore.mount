@@ -1,0 +1,7 @@
+[Mount]
+What=/dev/disk/by-id/scsi-0DO_Volume_EXAMPLE-datastore
+Where=/mnt/datastore
+Type=ext4
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,45 @@
+{
+    "ignition": { 
+        "version": "2.0.0"
+    },
+    "storage": {
+        "files": [
+            {
+                "filesystem": "root",
+                "path": "/var/lib/iptables/rules-save",
+                "mode": {{ mode 0644 }},
+                "owner": "root:root",
+                "contents": {
+                    "source": "{{ base64 "example/iptables/rules-save" }}"
+                }
+            },
+            {
+                "filesystem": "root",
+                "path": "/home/core/initialize.sh",
+                "mode": {{ mode 0555 }},
+                "contents": {
+                    "source": "{{ base64 "example/initialize.sh" }}"
+                }
+            }
+        ]
+    },
+    "systemd": {
+        "units": [
+            {
+                "name": "iptables-restore.service",
+                "enable": true
+            },
+            {
+                "name": "initialize.service",
+                "user": "core",
+                "enable": true,
+                "contents": "{{ escape "example/systemd/initialize.service" }}" 
+            },
+            {
+                "name": "mnt-datastore.mount",
+                "enable": true,
+                "contents": "{{ escape "example/systemd/mnt-datastore.mount" }}" 
+            }
+        ]
+    }
+}

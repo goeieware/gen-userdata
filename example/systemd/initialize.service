@@ -1,0 +1,13 @@
+[Unit]
+Description=Initialize the system
+After=iptables-restore.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+User=core
+TimeoutStartSec=infinity
+ExecStart=/home/core/initialize.sh
+
+[Install]
+WantedBy=multi-user.target
